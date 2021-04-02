@@ -14,7 +14,7 @@ interface PropsType {
 }
 
 const index: React.FC<PropsType> = (props) => {
-  console.log('scroll', document.documentElement.scrollTop);
+
   return (
     <div className={styles.ulContent}>
       <div className={styles.detail}>
@@ -27,7 +27,7 @@ const index: React.FC<PropsType> = (props) => {
               <Descriptions.Item label='民族'>汉</Descriptions.Item>
               <Descriptions.Item label='婚&emsp;&emsp;姻'>未婚</Descriptions.Item>
               <Descriptions.Item label='电话'>13007640364</Descriptions.Item>
-              <Descriptions.Item label='毕业院校'>洛阳理工学院（本科）</Descriptions.Item>
+              <Descriptions.Item label='毕业院校'>洛阳理工学院（18界 本科）</Descriptions.Item>
               <Descriptions.Item label='邮箱'>wangchaoweisky@hotmail.com</Descriptions.Item>
               <Descriptions.Item label='专&emsp;&emsp;业'>计算机科学与技术</Descriptions.Item>
               <Descriptions.Item label='住址'>上海市 浦东新区 灵岩南路（暂住）</Descriptions.Item>
@@ -151,7 +151,6 @@ const index: React.FC<PropsType> = (props) => {
 
       </div>
     </div>
-
   );
 };
 
