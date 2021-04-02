@@ -14,12 +14,12 @@ interface PropsType {
 }
 
 const index: React.FC<PropsType> = (props) => {
-console.log('scroll',document.documentElement.scrollTop)
+  console.log('scroll', document.documentElement.scrollTop);
   return (
     <div className={styles.ulContent}>
       <div className={styles.detail}>
         <ul>
-          <div className={styles.info} id="basicInformation"></div>
+          <div className={styles.info} id='basicInformation' />
           <li>
             <Descriptions column={2} size='small' title='基本信息'>
               <Descriptions.Item label='姓名'>王超伟</Descriptions.Item>
@@ -33,6 +33,7 @@ console.log('scroll',document.documentElement.scrollTop)
               <Descriptions.Item label='住址'>上海市 浦东新区 灵岩南路（暂住）</Descriptions.Item>
             </Descriptions>
           </li>
+          <div className={styles.info} id='specialty' />
           <li>
             <Descriptions colon={false} column={1} size='small' title='专业技能'>
               <Descriptions.Item label='1. '>熟练使 HTML + CSS 编写 web 页面。</Descriptions.Item>
@@ -47,6 +48,7 @@ console.log('scroll',document.documentElement.scrollTop)
               <Descriptions.Item label='10. '>熟悉基本的 Nginx 服务器配置。</Descriptions.Item>
             </Descriptions>
           </li>
+          <div className={styles.info} id='projectExperience' />
           <li>
             <div className={styles.project}>
               <Title level={5}>项目经历</Title>
@@ -56,6 +58,7 @@ console.log('scroll',document.documentElement.scrollTop)
                 <div>web 前端开发</div>
               </Text>
               <Divider style={{ margin: '10px 0' }} />
+              <div className={styles.info} id='management' />
               <div className={styles.projectItem}>
                 <span>OA管理系统</span>
                 <p> 公司内部使用的 OA 系统，包括公司内部运营系统、人员信息管理系统、财务管理系统，图库、题库、云报
@@ -70,6 +73,7 @@ console.log('scroll',document.documentElement.scrollTop)
                 </div>
               </div>
               <Divider style={{ margin: '10px 0' }} />
+              <div className={styles.info} id='declareGoods' />
               <div className={styles.projectItem}>
                 <span>云报货系统</span>
                 <p>客户在线报货平台，客户端提供 H5 应用，给客户提供在线报货、在线核对报货单、在线确认应付款、在线
@@ -87,19 +91,22 @@ console.log('scroll',document.documentElement.scrollTop)
                 </div>
               </div>
               <Divider style={{ margin: '10px 0' }} />
+              <div className={styles.info} id='configForm' />
               <div className={styles.projectItem}>
                 <span>ConfigForm 表单组件</span>
-                <p> 基于 antd 开发的高级表单组件，添加了一些快捷语法，给组件传入约定格式的数据，就可
+                <p>基于 antd 开发的高级表单组件，添加了一些快捷语法，给组件传入约定格式的数据，就可
                   以快速生成表单。适用于多表单、动态表单页面，让开发者摆脱大量的 jsx 代码，只需要关注数据结构
                   就可以轻松完成编写表单任务。</p>
               </div>
               <Divider style={{ margin: '10px 0' }} />
+              <div className={styles.info} id='pack' />
               <div className={styles.projectItem}>
                 <span>pack-cli工具</span>
-                <p> 基于 Nodejs 的命令行工具，用来管理团队的前端项目，提供代码拉取、打包、上线发布等
+                <p>基于 Nodejs 的命令行工具，用来管理团队的前端项目，提供代码拉取、打包、上线发布等
                   快捷指令，方便团队小伙伴写完代码后可以快速将代码部署到测试和生产服务器上。</p>
               </div>
               <Divider style={{ margin: '10px 0' }} />
+              <div className={styles.info} id='questionBank' />
               <div className={styles.projectItem}>
                 <span>朝霞题库</span>
                 <p>将公司多年积累及购买的优秀试题、试卷、答案、解析，整合到统一的平台，形成便于查找和使用的内
@@ -115,7 +122,8 @@ console.log('scroll',document.documentElement.scrollTop)
               </div>
             </div>
           </li>
-          <li id='selfEvaluate'>
+          <div className={styles.info} id='selfEvaluate' />
+          <li>
             <Title level={5}>自我评价</Title>
             <p>三年 web 开发经验。有丰富的前端项目搭建、开发、部署经验。善于在项目中抽象代码，提炼可复用的组件。注重用户体验，会主动体验项目，并在体验中思考优化。爱好技术，喜欢学习新知识、尝试
               新技术，并将其适当的应用在项目中。励志在未来成长为一名有所成就 web 工程师。</p>
@@ -126,15 +134,15 @@ console.log('scroll',document.documentElement.scrollTop)
         <nav>
           <ul>
             <li><a href='#basicInformation'>基本信息</a></li>
-            <li><a href=''>专业技能</a></li>
+            <li><a href='#specialty'>专业技能</a></li>
             <li>
-              <a href=''>项目经历</a>
+              <a href='#projectExperience'>项目经历</a>
               <ul>
-                <li><a href=''>OA管理系统</a></li>
-                <li><a href=''>云报货系统</a></li>
-                <li><a href=''>ConfigForm 表单组件</a></li>
-                <li><a href=''>pack-cli工具</a></li>
-                <li><a href=''>朝霞题库</a></li>
+                <li><a href='#management'>OA管理系统</a></li>
+                <li><a href='#declareGoods'>云报货系统</a></li>
+                <li><a href='#configForm'>ConfigForm 表单组件</a></li>
+                <li><a href='#pack'>pack-cli工具</a></li>
+                <li><a href='#questionBank'>朝霞题库</a></li>
               </ul>
             </li>
             <li><a href='#selfEvaluate'>自我评价</a></li>

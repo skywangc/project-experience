@@ -5,6 +5,25 @@
   margin-top: -100px;
 }
 
+.info:target {
+  & + div {
+    animation: colorConvert 2s;
+  }
+
+  & + li {
+    animation: colorConvert 2s;
+  }
+}
+
+@keyframes colorConvert {
+  from {
+    background: #fdfcdf
+  }
+  to {
+    background: #fff
+  }
+}
+
 .ulContent {
   margin-top: 10px;
 }
@@ -48,22 +67,32 @@
 }
 
 .menu a {
-  color: #040611;
+  color: #000;
+
+  &:hover {
+    color: #1088e9;
+  }
+
+  &:target {
+    color: red;
+  }
 }
 
 .menu > nav > ul {
   font-weight: 600;
 
   li {
-
     vertical-align: middle;
     margin-bottom: 5px;
   }
 }
 
 .menu > nav > ul > li > ul {
-  font-weight: 400;
-  color: #333;
+  a {
+    font-weight: 400;
+    color: #2a2a2a;
+  }
+
   padding-left: 20px;
 }
 
