@@ -1,0 +1,97 @@
+@left-width: 200px;
+
+.info {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+.ulContent {
+  margin-top: 10px;
+}
+
+.ulContent > div {
+  display: inline-block;
+}
+
+.detail {
+  width: calc(100% - @left-width);
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul > li {
+    border-radius: 8px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 15px;
+  }
+}
+
+.menu {
+  width: @left-width;
+  vertical-align: top;
+  margin-top: 30px;
+  position: fixed;
+  top: 100px;
+
+  ul li {
+    cursor: pointer;
+  }
+}
+
+.textTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu a {
+  color: #040611;
+}
+
+.menu > nav > ul {
+  font-weight: 600;
+
+  li {
+
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+}
+
+.menu > nav > ul > li > ul {
+  font-weight: 400;
+  color: #333;
+  padding-left: 20px;
+}
+
+.projectItem {
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.projectItem:hover {
+  background-color: #e5e5e5;
+}
+
+.projectItem > span {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+.workContent > span {
+  font-weight: 500;
+}
+
+.project {
+  :global {
+    td {
+      padding-bottom: 0 !important;
+    }
+  }
+
+}
